@@ -1,5 +1,4 @@
-# PL1-EmpresaAutomoviles
-<<<<<<< HEAD
-=======
+#EMPRESA DE AUTOMOVILES.
+## Una simple practica de c++ para aprender el uso de pilas y colas.
 
->>>>>>> e3d5666fa99425441baf8b7dd85d95b062f9391e
+
