@@ -4,14 +4,15 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <Camion.h>
+#include "Vehiculo.h"
 using namespace std;
 
 int main()
 {
 
-    Camion *cam = new Camion("asdsd", "asdd", "sasd", "asdd");
+    Vehiculo *Veh = new Vehiculo("asdsd", "asdd", "sasd", "asdd");
 
-    cam->to_string();
+    Veh->to_string();
 
     /*
     //Variables de control del menu de usuario

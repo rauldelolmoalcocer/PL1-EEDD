@@ -1,10 +1,10 @@
-#include "Camion.h"
+#include "Vehiculo.h"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-Camion::Camion(string numero_bastidor, string modelo, string color, string concesionario)
+Vehiculo::Vehiculo(string numero_bastidor, string modelo, string color, string concesionario)
 {
     this->numero_bastidor = numero_bastidor;
     this->modelo = modelo;
@@ -12,13 +12,13 @@ Camion::Camion(string numero_bastidor, string modelo, string color, string conce
     this->concesionario = concesionario;
 }
 
-Camion::~Camion()
+Vehiculo::~Vehiculo()
 {
     //dtor
 }
 
 
-void Camion::to_string(){
+void Vehiculo::to_string(){
     cout << "Numero de bastidores " << numero_bastidor << " , Modelo " << modelo << " , Color " << color << " , Concesionario " << concesionario << endl;
 
 }
