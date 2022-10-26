@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1666782112 source:c:\users\rauld\downloads\pl1_concesionario\src\interactionuiutils.cpp
+	"InteractionUIUtils.h"
+	<iostream>
+	<string>
+
+1666782061 c:\users\rauld\downloads\pl1_concesionario\include\interactionuiutils.h
+	<iostream>
+	<string>
+
+1666782710 source:c:\users\rauld\downloads\pl1_concesionario\main.cpp
+	<iostream>
+	<string>
+	<InteractionUIUtils.h>
+	<stdlib.h>
+	<windows.h>
+	<Camion.h>
+
+1666782551 c:\users\rauld\downloads\pl1_concesionario\include\camion.h
+	<string>
+

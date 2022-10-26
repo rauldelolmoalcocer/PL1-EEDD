@@ -3,11 +3,17 @@
 #include <InteractionUIUtils.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <Camion.h>
 using namespace std;
 
 int main()
 {
 
+    Camion *cam = new Camion("asdsd", "asdd", "sasd", "asdd");
+
+    cam->to_string();
+
+    /*
     //Variables de control del menu de usuario
     int optionUser = 999999;
 
@@ -15,25 +21,6 @@ int main()
     while(optionUser != 0)
     {
 
-        /*
-
-            1. Generar aleatoriamente la cola de automóviles disponibles en la fábrica con NV automóviles.
-            2. Generar aleatoriamente la cola de automóviles disponibles en la fábrica solicitando NV por pantalla.
-            3. Mostrar en pantalla los datos de la cola de automóviles disponibles en la fábrica.
-            4. Avanzar un paso en la simulación: salen NS automóviles de la cola (almacén de la fábrica) y llegan
-            a un almacén de zona (elegida aleatoriamente).
-            5. Avanzar un paso en la simulación solicitando NS por pantalla: salen NS automóviles de la cola
-            (almacén de la fábrica) y llegan a un almacén de zona.
-            6. Mostrar en pantalla los datos de los almacenes de zona (camiones o pilas y registro o cola).
-            7. Borrar la cola de automóviles disponibles en la fábrica, de los camiones y/o de los registros de zona.
-            8. Realizar la simulación hasta finalizar los automóviles disponibles (en cada paso salen NS
-            automóviles). En cada uno de los pasos se mostrarán en pantalla los datos de la cola de automóviles
-            disponibles (cola del almacén de fábrica) y de los camiones y zonas de reparto (pilas y colas).
-            9.Limpiar consola.
-            0. Salir.
-
-
-        */
         //system("cls");
 
         //Imprimos la interfaz de usuario.
@@ -58,31 +45,31 @@ int main()
             break;
 
         case 1:
-            //Generar aleatoriamente la cola de automóviles disponibles en la fábrica con NV automóviles
+            //Generar aleatoriamente la cola de automï¿½viles disponibles en la fï¿½brica con NV automï¿½viles
             cout << "Generar cola automoviles" << endl;
             break;
         case 2:
-            // Generar aleatoriamente la cola de automóviles disponibles en la fábrica solicitando NV por pantalla
+            // Generar aleatoriamente la cola de automï¿½viles disponibles en la fï¿½brica solicitando NV por pantalla
             cout << "Generar cola automoviles disponibles" << endl;
             break;
         case 3:
-            //Mostrar en pantalla los datos de la cola de automóviles disponibles en la fábrica.
+            //Mostrar en pantalla los datos de la cola de automï¿½viles disponibles en la fï¿½brica.
             cout << "Mostrar datos de pila" << endl;
             break;
         case 4:
-            //Avanzar un paso en la simulación: salen NS automóviles de la cola (almacén de la fábrica) y llegana un almacén de zona (elegida aleatoriamente).
+            //Avanzar un paso en la simulaciï¿½n: salen NS automï¿½viles de la cola (almacï¿½n de la fï¿½brica) y llegana un almacï¿½n de zona (elegida aleatoriamente).
             break;
         case 5:
-            //5. Avanzar un paso en la simulación solicitando NS por pantalla: salen NS automóviles de la cola(almacén de la fábrica) y llegan a un almacén de zona.
+            //5. Avanzar un paso en la simulaciï¿½n solicitando NS por pantalla: salen NS automï¿½viles de la cola(almacï¿½n de la fï¿½brica) y llegan a un almacï¿½n de zona.
             break;
         case 6:
             //6. Mostrar en pantalla los datos de los almacenes de zona (camiones o pilas y registro o cola).
             break;
         case 7:
-            // 7. Borrar la cola de automóviles disponibles en la fábrica, de los camiones y/o de los registros de zona.
+            // 7. Borrar la cola de automï¿½viles disponibles en la fï¿½brica, de los camiones y/o de los registros de zona.
             break;
         case 8:
-            // 8. Realizar la simulación hasta finalizar los automóviles disponibles (en cada paso salen NS automóviles)
+            // 8. Realizar la simulaciï¿½n hasta finalizar los automï¿½viles disponibles (en cada paso salen NS automï¿½viles)
             break;
 
         case 9:
@@ -94,6 +81,11 @@ int main()
         }
 
 
+
+
+
     }
+
+           */
     return 0;
 }
