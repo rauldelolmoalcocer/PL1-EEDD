@@ -17,6 +17,19 @@ Vehiculo::~Vehiculo()
     //dtor
 }
 
+string Vehiculo::get_numero_bastidor(){
+    return(numero_bastidor);
+
+}
+string Vehiculo::get_modelo(){
+    return(modelo);
+}
+string Vehiculo::get_color(){
+    return(color);
+}
+string Vehiculo::get_concesionario(){
+    return(concesionario);
+}
 
 void Vehiculo::to_string(){
     cout << "Numero de bastidores " << numero_bastidor << " , Modelo " << modelo << " , Color " << color << " , Concesionario " << concesionario << endl;

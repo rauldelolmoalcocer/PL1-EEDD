@@ -10,6 +10,14 @@ class Nodo
     public:
         Nodo(Vehiculo *veh, Nodo *siguiente);
         virtual ~Nodo();
+        void to_string();
+
+        //anadir proteccion a cola_vacia.
+        void cola_vacia(Nodo *frente);
+
+        int* get_Vehiculo_pointer();
+        int* get_Nodo_pointer();
+
 
     protected:
 
