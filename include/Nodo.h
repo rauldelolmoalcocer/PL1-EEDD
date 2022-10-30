@@ -8,15 +8,21 @@
 class Nodo
 {
     public:
+        //contructores de objeto Nodo
         Nodo(Vehiculo *veh, Nodo *siguiente);
         virtual ~Nodo();
+
+
+        //getters y setters
+        Vehiculo* get_Vehiculo();
+        void set_vehiculo_nodo(Vehiculo *veh);
+
+        Nodo* get_Nodo_siguiente();
+        void set_nodo_siguiente(Nodo *nod);
+
+        //toString() para mostrar datos por pantalla
         void to_string();
 
-        //anadir proteccion a cola_vacia.
-        void cola_vacia(Nodo *frente);
-
-        int* get_Vehiculo_pointer();
-        int* get_Nodo_pointer();
 
 
     protected:

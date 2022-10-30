@@ -1,7 +1,7 @@
 #include "Nodo.h"
 #include <string>
 #include <iostream>
-
+#include "Vehiculo.h"
 using namespace std;
 
 Nodo::Nodo(Vehiculo *veh, Nodo *siguiente)
@@ -14,14 +14,19 @@ Nodo::~Nodo()
     //dtor
 }
 
-int* Nodo::get_Vehiculo_pointer(){
-    return(&veh);
+Vehiculo* Nodo::get_Vehiculo(){
+    return(veh);
 }
-int* get_Nodo_pointer(){
-    return(&siguiente);
+void Nodo::set_vehiculo_nodo(Vehiculo *veh){
+    this->veh = veh;
+}
+Nodo* Nodo::get_Nodo_siguiente(){
+    return(siguiente);
+}
+void Nodo::set_nodo_siguiente(Nodo *nod){
+    this->siguiente = nod;
 }
 
-
-Nodo::to_string(){
+void Nodo::to_string(){
     cout << "Puntero a Nodo:" << siguiente << "vehiculo" << veh << endl;
 }

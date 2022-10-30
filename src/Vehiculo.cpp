@@ -1,6 +1,7 @@
 #include "Vehiculo.h"
 #include <string>
 #include <iostream>
+#include <Nodo.h>
 
 using namespace std;
 
@@ -30,6 +31,7 @@ string Vehiculo::get_color(){
 string Vehiculo::get_concesionario(){
     return(concesionario);
 }
+
 
 void Vehiculo::to_string(){
     cout << "Numero de bastidores " << numero_bastidor << " , Modelo " << modelo << " , Color " << color << " , Concesionario " << concesionario << endl;

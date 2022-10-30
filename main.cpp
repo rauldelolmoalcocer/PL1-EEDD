@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <InteractionUIUtils.h>
+#include <Cola.h>
 #include <stdlib.h>
 #include <windows.h>
 #include <Camion.h>
@@ -11,8 +12,35 @@ int main()
 {
 
     Vehiculo *Veh = new Vehiculo("asdsd", "asdd", "sasd", "asdd");
-
+    Vehiculo *Veh1 = new Vehiculo("Manolo", "Pepe", "sasd", "asdd");
+    Vehiculo *Veh2 = new Vehiculo("Ejerc", "Juancho", "sasd", "asdd");
     Veh->to_string();
+
+    Cola *cola = new Cola();
+
+    cola->set_nodo_cola(Veh);
+
+    cola->get_datos_nodo_frente();
+
+    cola->set_nodo_cola(Veh1);
+
+    cola->get_datos_nodo_frente();
+
+    cout << "Fin de cola" <<cola->get_nodo_cola_fin()->get_Vehiculo()->get_modelo() << endl;
+
+    cola->set_nodo_cola(Veh2);
+    cout << "Fin de cola" <<cola->get_nodo_cola_fin()->get_Vehiculo()->get_modelo() << endl;
+
+
+    cola->desencolar();
+
+    cola->get_datos_nodo_frente();
+
+    cola->desencolar();
+    cola->get_datos_nodo_frente();
+
+    cola->desencolar();
+    cola->get_datos_nodo_frente();
 
     /*
     //Variables de control del menu de usuario
@@ -88,5 +116,6 @@ int main()
     }
 
            */
+
     return 0;
 }

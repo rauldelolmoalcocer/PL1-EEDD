@@ -35,10 +35,20 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Camion.h" />
+		<Unit filename="include/Cola.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="include/InteractionUIUtils.h" />
+		<Unit filename="include/Nodo.h" />
+		<Unit filename="include/Pila.h" />
+		<Unit filename="include/Vehiculo.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Camion.cpp" />
+		<Unit filename="src/Cola.cpp" />
 		<Unit filename="src/InteractionUIUtils.cpp" />
+		<Unit filename="src/Nodo.cpp" />
+		<Unit filename="src/Pila.cpp" />
+		<Unit filename="src/Vehiculo.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

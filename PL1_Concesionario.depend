@@ -19,45 +19,77 @@
 1666782551 c:\users\rauld\downloads\pl1_concesionario\include\camion.h
 	<string>
 
-1666798395 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\main.cpp
+1667126755 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\main.cpp
 	<iostream>
 	<string>
 	<InteractionUIUtils.h>
+	<Cola.h>
 	<stdlib.h>
 	<windows.h>
 	<Camion.h>
 	"Vehiculo.h"
 
-1666783227 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\interactionuiutils.h
+1667128611 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\interactionuiutils.h
 	<iostream>
 	<string>
 
-1666783227 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\camion.h
+1666779627 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\camion.h
 	<string>
 
-1666798305 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\camion.cpp
+1666794705 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\camion.cpp
 	"Camion.h"
 	<string>
 	<iostream>
 
-1666783227 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\interactionuiutils.cpp
+1667130253 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\interactionuiutils.cpp
 	"InteractionUIUtils.h"
 	<iostream>
 	<string>
+	<windows.h>
 
-1666798472 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\vehiculo.h
+1666860527 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\vehiculo.h
 	<string>
 	<iostream>
 
-1666797964 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\nodo.cpp
+1667125949 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\nodo.cpp
 	"Nodo.h"
+	<string>
+	<iostream>
+	"Vehiculo.h"
 
-1666798398 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\nodo.h
+1667126580 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\nodo.h
 	<iostream>
 	<string>
+	"Vehiculo.h"
 
-1666797840 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\pila.cpp
+1666794240 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\pila.cpp
 	"Pila.h"
 
-1666798398 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\pila.h
+1666794798 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\pila.h
+
+1667126531 c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\cola.h
+	"Nodo.h"
+	"Vehiculo.h"
+	<string>
+	<iostream>
+
+1667053446 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\vehiculo.cpp
+	"Vehiculo.h"
+	<string>
+	<iostream>
+	<Nodo.h>
+
+1667126531 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\include\cola.h
+	"Nodo.h"
+	"Vehiculo.h"
+	<string>
+	<iostream>
+
+1667130086 source:c:\users\rauld\desktop\pl1\pl1-eedd\pl1-eedd\src\cola.cpp
+	"Cola.h"
+	"Nodo.h"
+	"Vehiculo.h"
+	<iostream>
+	<windows.h>
+	"InteractionUIUtils.h"
 

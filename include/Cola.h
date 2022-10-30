@@ -13,18 +13,31 @@ using namespace std;
 Por defecto se generar vacia con el fin de que el usuario instroducca los datos
 con los getters y setters correspondientes.
 */
-class Cola
-{
+class Cola{
+
     public:
+
+        //Contructores y destructores.
+
         Cola();
         virtual ~Cola();
 
         //geters y setters de cola
 
         void set_nodo_cola(Vehiculo *veh);//inserta un nodo a la cola
-        Nodo get_nodo_cola(); //Devuelve un nodo frente
-        void eliminar_nodo_cola();//elimina el dato de la cola
+        Nodo* get_frente_cola(); //Devuelve un nodo frente
+
+        Nodo* get_nodo_cola_fin();
+
+        bool cola_vacia(Nodo *frente);
+
+        Vehiculo* desencolar();//elimina el dato de la cola
+
+        //Datos frente cola
         void get_datos_nodo_frente();
+
+
+
     protected:
 
     private:
