@@ -38,6 +38,8 @@
 		<Unit filename="include/Cola.h">
 			<Option compile="1" />
 		</Unit>
+		<Unit filename="include/Fabrica.h" />
+		<Unit filename="include/FabricaService.h" />
 		<Unit filename="include/InteractionUIUtils.h" />
 		<Unit filename="include/Nodo.h" />
 		<Unit filename="include/Pila.h" />
@@ -45,6 +47,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Camion.cpp" />
 		<Unit filename="src/Cola.cpp" />
+		<Unit filename="src/Fabrica.cpp" />
+		<Unit filename="src/FabricaService.cpp" />
 		<Unit filename="src/InteractionUIUtils.cpp" />
 		<Unit filename="src/Nodo.cpp" />
 		<Unit filename="src/Pila.cpp" />

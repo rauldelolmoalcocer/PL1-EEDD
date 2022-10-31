@@ -93,3 +93,108 @@
 	<windows.h>
 	"InteractionUIUtils.h"
 
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\cola.h
+	"Nodo.h"
+	"Vehiculo.h"
+	<string>
+	<iostream>
+
+1667130568 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\nodo.h
+	<iostream>
+	<string>
+	"Vehiculo.h"
+
+1667130568 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\vehiculo.h
+	<string>
+	<iostream>
+
+1667220389 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\main.cpp
+	<iostream>
+	<string>
+	<InteractionUIUtils.h>
+	<Cola.h>
+	<stdlib.h>
+	<windows.h>
+	<Camion.h>
+	"Vehiculo.h"
+	"Fabrica.h"
+	"FabricaService.h"
+
+1667130568 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\interactionuiutils.h
+	<iostream>
+	<string>
+
+1667130568 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\cola.h
+	"Nodo.h"
+	"Vehiculo.h"
+	<string>
+	<iostream>
+
+1667130568 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\camion.h
+	<string>
+
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\camion.cpp
+	"Camion.h"
+	<string>
+	<iostream>
+
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\cola.cpp
+	"Cola.h"
+	"Nodo.h"
+	"Vehiculo.h"
+	<iostream>
+	<windows.h>
+	"InteractionUIUtils.h"
+
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\interactionuiutils.cpp
+	"InteractionUIUtils.h"
+	<iostream>
+	<string>
+	<windows.h>
+
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\nodo.cpp
+	"Nodo.h"
+	<string>
+	<iostream>
+	"Vehiculo.h"
+
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\pila.cpp
+	"Pila.h"
+
+1667130568 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\pila.h
+
+1667130568 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\vehiculo.cpp
+	"Vehiculo.h"
+	<string>
+	<iostream>
+	<Nodo.h>
+
+1667215972 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\fabrica.cpp
+	"Fabrica.h"
+	"Cola.h"
+	<iostream>
+	<string>
+
+1667216604 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\fabrica.h
+	"Cola.h"
+	<iostream>
+	<string>
+
+1667228330 source:c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\src\fabricaservice.cpp
+	"FabricaService.h"
+	<iostream>
+	"Vehiculo.h"
+	<string>
+	"Cola.h"
+	<Fabrica.h>
+	<stdlib.h>
+	<ctime>
+	<stdio.h>
+
+1667220741 c:\users\rauld\desktop\pl1-eedd-master\pl1-eedd-master\include\fabricaservice.h
+	<iostream>
+	"Vehiculo.h"
+	<string>
+	"Cola.h"
+	<Fabrica.h>
+

@@ -6,11 +6,36 @@
 #include <windows.h>
 #include <Camion.h>
 #include "Vehiculo.h"
+#include "Fabrica.h"
+#include "FabricaService.h"
+
+
 using namespace std;
 
 int main()
 {
+    FabricaService::GenerateNumeroBastidor();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     Vehiculo *Veh = new Vehiculo("asdsd", "asdd", "sasd", "asdd");
     Vehiculo *Veh1 = new Vehiculo("Manolo", "Pepe", "sasd", "asdd");
     Vehiculo *Veh2 = new Vehiculo("Ejerc", "Juancho", "sasd", "asdd");
@@ -41,7 +66,7 @@ int main()
 
     cola->desencolar();
     cola->get_datos_nodo_frente();
-
+    */
     /*
     //Variables de control del menu de usuario
     int optionUser = 999999;
