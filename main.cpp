@@ -8,34 +8,50 @@
 #include "Vehiculo.h"
 #include "Fabrica.h"
 #include "FabricaService.h"
-
+#include <time.h>
+#include "Pila.h"
 
 using namespace std;
 
 int main()
 {
-    FabricaService::GenerateNumeroBastidor();
 
 
+/*
+    Pila *pila = new Pila();
+
+    Vehiculo *Veh = new Vehiculo("asdsd", "asdd", "sasd", "asdd");
+    Vehiculo *Veh1 = new Vehiculo("Manolo", "Pepe", "sasd", "asdd");
+    Vehiculo *Veh2 = new Vehiculo("Ejerc", "Juancho", "sasd", "asdd");
+    Vehiculo *Veh3 = new Vehiculo("W2ewwqe", "Lucia", "sasd", "asdd");
+    Vehiculo *Veh4 = new Vehiculo("weqwec", "Isabel", "sasd", "asdd");
 
 
+    pila->set_nodo_a_pila(Veh);
+    pila->get_data_cima();
 
+    pila->set_nodo_a_pila(Veh1);
+    pila->get_data_cima();
+    pila->set_nodo_a_pila(Veh2);
+    pila->get_data_cima();
+    pila->set_nodo_a_pila(Veh3);
+    pila->get_data_cima();
+    pila->set_nodo_a_pila(Veh4);
+    pila->get_data_cima();
 
+    pila->desapilar_nodo();
+    pila->get_data_cima();
+*/
+/*
+    Fabrica *fab = new Fabrica("manolo");
 
+    FabricaService::GenerateRandomVehiculos(fab, 4);
 
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
+    fab->get_cola_fabricacion()->desencolar();
+    fab->get_cola_fabricacion()->desencolar();
+    fab->get_cola_fabricacion()->desencolar();
+    fab->get_cola_fabricacion()->get_datos_nodo_frente();
+*/    /*
     Vehiculo *Veh = new Vehiculo("asdsd", "asdd", "sasd", "asdd");
     Vehiculo *Veh1 = new Vehiculo("Manolo", "Pepe", "sasd", "asdd");
     Vehiculo *Veh2 = new Vehiculo("Ejerc", "Juancho", "sasd", "asdd");
@@ -67,7 +83,11 @@ int main()
     cola->desencolar();
     cola->get_datos_nodo_frente();
     */
+
     /*
+    //Creamos el objeto fabrica.
+    Fabrica *fab_vehiculos = new Fabrica("Fabrica Manolo");
+
     //Variables de control del menu de usuario
     int optionUser = 999999;
 
@@ -100,15 +120,30 @@ int main()
 
         case 1:
             //Generar aleatoriamente la cola de autom�viles disponibles en la f�brica con NV autom�viles
-            cout << "Generar cola automoviles" << endl;
+            cout << "Generar cola automoviles, aleatoriamente" << endl;
+            cout << "Se van a generar 60 vehiculos aleatoriamente" << endl;
+
+            FabricaService::GenerateRandomVehiculos(fab_vehiculos, 60);
             break;
         case 2:
+
+            int NV;
             // Generar aleatoriamente la cola de autom�viles disponibles en la f�brica solicitando NV por pantalla
-            cout << "Generar cola automoviles disponibles" << endl;
+            cout << "Generar cola automoviles preguntando a usuario cuantos quire" << endl;
+
+            cout << "Cuantos automoviles quieres en la cola?" << endl;
+            cin >> NV;
+
+            FabricaService::GenerateRandomVehiculos(fab_vehiculos, NV);
+
+
+
             break;
         case 3:
             //Mostrar en pantalla los datos de la cola de autom�viles disponibles en la f�brica.
             cout << "Mostrar datos de pila" << endl;
+            Fabrica::MostrarDatosPorPantalla(fab_vehiculos);
+
             break;
         case 4:
             //Avanzar un paso en la simulaci�n: salen NS autom�viles de la cola (almac�n de la f�brica) y llegana un almac�n de zona (elegida aleatoriamente).
@@ -139,8 +174,8 @@ int main()
 
 
     }
+*/
 
-           */
 
     return 0;
 }

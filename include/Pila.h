@@ -1,16 +1,23 @@
 #ifndef PILA_H
 #define PILA_H
 
-
+#include <Nodo.h>
 class Pila
 {
-    public:
-        Pila();
-        virtual ~Pila();
+public:
+    Pila();
+    virtual ~Pila();
 
-    protected:
+    void set_nodo_a_pila(Vehiculo *veh);
+    Nodo* get_cima();
+    void desapilar_nodo();
 
-    private:
+    void get_data_cima();
+
+protected:
+
+private:
+    Nodo *cima; //puntero a cima cola.
 
 };
 
