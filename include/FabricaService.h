@@ -15,6 +15,8 @@ class FabricaService
         static int GernerateRandomNumber(int A, int B);
         static string GenerateNumeroBastidor();
         static void MostrarDatosPorPantalla(Fabrica *fab);
+       // static void SimulacionFabrica()
+
 
     protected:
 

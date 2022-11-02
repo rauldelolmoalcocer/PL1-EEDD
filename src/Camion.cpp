@@ -1,15 +1,15 @@
 #include "Camion.h"
 #include <string>
 #include <iostream>
-
+#include "Pila.h"
 using namespace std;
 
-Camion::Camion(string numero_bastidor, string modelo, string color, string concesionario)
+Camion::Camion(string zona_asig)
 {
-    this->numero_bastidor = numero_bastidor;
-    this->modelo = modelo;
-    this->color = color;
-    this->concesionario = concesionario;
+    this->zona_asig;
+    this->stack_ = new Pila();
+    this->capacidad = 10;
+    this->num_nodos = 0;
 }
 
 Camion::~Camion()
@@ -17,8 +17,31 @@ Camion::~Camion()
     //dtor
 }
 
+string Camion::get_zona_asig(){
+    return(zona_asig);
 
-void Camion::to_string(){
-    cout << "Numero de bastidores " << numero_bastidor << " , Modelo " << modelo << " , Color " << color << " , Concesionario " << concesionario << endl;
+}
+Pila* Camion::get_stack(){
+    return(stack_);
+    }
+int Camion::get_capacidad(){
+    return(capacidad);
+
+}
+
+int Camion::get_num_nodos(){
+    return(num_nodos);
+}
+
+void Camion::incremetar_capacidad(){
+    this->capacidad = capacidad + 1;
+
+}
+bool Camion::overflow(){
+    return(capacidad == num_nodos ? true : false);
+}
+void Camion::to_string()
+{
+    cout << "" << endl;
 
 }

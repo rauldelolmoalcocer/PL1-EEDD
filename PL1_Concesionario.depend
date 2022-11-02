@@ -349,15 +349,16 @@
 	<string>
 	<iostream>
 
-1667375299 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\camion.h
+1667380181 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\camion.h
 	<string>
+	"Pila.h"
 
 1667375905 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\fabrica.h
 	"Cola.h"
 	<iostream>
 	<string>
 
-1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\fabricaservice.h
+1667380215 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\fabricaservice.h
 	<iostream>
 	"Vehiculo.h"
 	<string>
@@ -367,10 +368,11 @@
 1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\pila.h
 	<Nodo.h>
 
-1667375300 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\camion.cpp
+1667380206 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\camion.cpp
 	"Camion.h"
 	<string>
 	<iostream>
+	"Pila.h"
 
 1667377068 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\cola.cpp
 	"Cola.h"
@@ -421,4 +423,9 @@
 	<string>
 	<iostream>
 	<Nodo.h>
+
+1667379820 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\almacen.cpp
+	"Almacen.h"
+
+1667380142 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\almacen.h
 

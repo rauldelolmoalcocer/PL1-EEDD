@@ -101,6 +101,20 @@ int main()
     //Creamos el objeto fabrica.
     Fabrica *fab_vehiculos = new Fabrica("Fabrica Manolo");
 
+    //Creamos los 8 camiones.
+    Camion *camA1 = new Camion("A");
+    Camion *camA2 = new Camion("A");
+
+    Camion *camB1 = new Camion("B");
+    Camion *camB2 = new Camion("B");
+
+    Camion *camC1 = new Camion("C");
+    Camion *camC2 = new Camion("C");
+
+    Camion *camD1 = new Camion("D");
+    Camion *camD2 = new Camion("D");
+
+
     //Variables de control del menu de usuario
     int optionUser = 999999;
 
