@@ -29,9 +29,9 @@ class Cola{
 
         Nodo* get_nodo_cola_fin();
 
-        bool cola_vacia(Nodo *frente);
+        bool cola_vacia();
 
-        Vehiculo* desencolar();//elimina el dato de la cola
+        void desencolar();//elimina el dato de la cola
 
         //Datos frente cola
         void get_datos_nodo_frente();

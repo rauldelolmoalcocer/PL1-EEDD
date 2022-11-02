@@ -16,6 +16,19 @@ using namespace std;
 int main()
 {
 
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+/*
+    //Creamos la cola
+    Fabrica *fab = new Fabrica("fabricas manolo");
+
+    FabricaService::GenerateRandomVehiculos(fab, 13);
+
+
+    FabricaService::MostrarDatosPorPantalla(fab);
+
+    //fab->get_cola_fabricacion()->get_datos_nodo_frente();
+
+*/
 
 /*
     Pila *pila = new Pila();
@@ -84,7 +97,7 @@ int main()
     cola->get_datos_nodo_frente();
     */
 
-    /*
+
     //Creamos el objeto fabrica.
     Fabrica *fab_vehiculos = new Fabrica("Fabrica Manolo");
 
@@ -142,11 +155,19 @@ int main()
         case 3:
             //Mostrar en pantalla los datos de la cola de autom�viles disponibles en la f�brica.
             cout << "Mostrar datos de pila" << endl;
-            Fabrica::MostrarDatosPorPantalla(fab_vehiculos);
+            if(!fab_vehiculos->get_cola_fabricacion()->cola_vacia()){
+                            FabricaService::MostrarDatosPorPantalla(fab_vehiculos);
+            }else{
+                SetConsoleTextAttribute(h, 4);
+                cout << "ERROR: La cola esta vacia." << endl;
+                SetConsoleTextAttribute(h, 7);
+            }
+
 
             break;
         case 4:
             //Avanzar un paso en la simulaci�n: salen NS autom�viles de la cola (almac�n de la f�brica) y llegana un almac�n de zona (elegida aleatoriamente).
+
             break;
         case 5:
             //5. Avanzar un paso en la simulaci�n solicitando NS por pantalla: salen NS autom�viles de la cola(almac�n de la f�brica) y llegan a un almac�n de zona.
@@ -174,7 +195,7 @@ int main()
 
 
     }
-*/
+
 
 
     return 0;

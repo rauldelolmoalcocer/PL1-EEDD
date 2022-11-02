@@ -310,3 +310,115 @@
 	<stdio.h>
 	<windows.h>
 
+1667377070 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\cola.h
+	"Nodo.h"
+	"Vehiculo.h"
+	<string>
+	<iostream>
+
+1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\nodo.h
+	<iostream>
+	<string>
+	"Vehiculo.h"
+
+1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\vehiculo.h
+	<string>
+	<iostream>
+
+1667376987 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\main.cpp
+	<iostream>
+	<string>
+	<InteractionUIUtils.h>
+	<Cola.h>
+	<stdlib.h>
+	<windows.h>
+	<Camion.h>
+	"Vehiculo.h"
+	"Fabrica.h"
+	"FabricaService.h"
+	<time.h>
+	"Pila.h"
+
+1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\interactionuiutils.h
+	<iostream>
+	<string>
+
+1667377070 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\cola.h
+	"Nodo.h"
+	"Vehiculo.h"
+	<string>
+	<iostream>
+
+1667375299 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\camion.h
+	<string>
+
+1667375905 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\fabrica.h
+	"Cola.h"
+	<iostream>
+	<string>
+
+1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\fabricaservice.h
+	<iostream>
+	"Vehiculo.h"
+	<string>
+	"Cola.h"
+	<Fabrica.h>
+
+1667375300 c:\users\rauld\desktop\pl1\v2\pl1-eedd\include\pila.h
+	<Nodo.h>
+
+1667375300 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\camion.cpp
+	"Camion.h"
+	<string>
+	<iostream>
+
+1667377068 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\cola.cpp
+	"Cola.h"
+	"Nodo.h"
+	"Vehiculo.h"
+	<iostream>
+	<windows.h>
+	"InteractionUIUtils.h"
+
+1667376025 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\fabrica.cpp
+	"Fabrica.h"
+	"Cola.h"
+	<iostream>
+	<string>
+
+1667376403 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\fabricaservice.cpp
+	"FabricaService.h"
+	<iostream>
+	"Vehiculo.h"
+	<string>
+	"Cola.h"
+	<Fabrica.h>
+	<stdlib.h>
+	<ctime>
+	<stdio.h>
+	<windows.h>
+
+1667375300 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\interactionuiutils.cpp
+	"InteractionUIUtils.h"
+	<iostream>
+	<string>
+	<windows.h>
+
+1667375300 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\nodo.cpp
+	"Nodo.h"
+	<string>
+	<iostream>
+	"Vehiculo.h"
+
+1667375300 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\pila.cpp
+	"Pila.h"
+	"Vehiculo.h"
+	"Nodo.h"
+	<iostream>
+
+1667375300 source:c:\users\rauld\desktop\pl1\v2\pl1-eedd\src\vehiculo.cpp
+	"Vehiculo.h"
+	<string>
+	<iostream>
+	<Nodo.h>
+

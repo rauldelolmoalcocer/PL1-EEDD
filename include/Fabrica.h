@@ -20,6 +20,8 @@ class Fabrica
 
         void set_nombre_fabrica(string nombre_fabrica);
 
+        void set_cola_fabricacion(Cola *cola);
+
 
 
     protected:

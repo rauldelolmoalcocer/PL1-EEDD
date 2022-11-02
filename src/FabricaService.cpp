@@ -84,23 +84,27 @@ void FabricaService::MostrarDatosPorPantalla(Fabrica *fab){
 */
 
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-
+    Cola *aux = new Cola();
     Fabrica *aux_fab = fab;
-    if(aux_fab->get_cola_fabricacion()->get_frente_cola() != NULL){
+    if(!aux_fab->get_cola_fabricacion()->cola_vacia()){
 
 
-       do{
+       while(!aux_fab->get_cola_fabricacion()->cola_vacia()){
 
             //pintamos los datos del frente de la cola.
             aux_fab->get_cola_fabricacion()->get_datos_nodo_frente();
             //pintamos los datos del automobil
             aux_fab->get_cola_fabricacion()->get_frente_cola()->get_Vehiculo()->to_string();
 
+            //hazme una cima de cola y insertamela en la cola auxiliar
+            aux->set_nodo_cola( aux_fab->get_cola_fabricacion()->get_frente_cola()->get_Vehiculo());
             //desapilamos
-
             aux_fab->get_cola_fabricacion()->desencolar();
 
-        } while(!(aux_fab->get_cola_fabricacion()->get_frente_cola() == aux_fab->get_cola_fabricacion()->get_nodo_cola_fin()));
+        }
+
+        fab->set_cola_fabricacion(aux);
+        delete aux;
     }else{
 
         SetConsoleTextAttribute(h, 4);

@@ -30,4 +30,13 @@ void Fabrica::set_nombre_fabrica(string nombre_fabrica){
 }
 
 
+void Fabrica::set_cola_fabricacion(Cola *cola){
+    if(cola_fabricacion->cola_vacia()){
+
+    this->cola_fabricacion = cola;
+    }else{
+        cout << "ERROR: La cola no esta vacia hay riesgo de crear memoria residual."<<endl;
+    }
+
+}
 
