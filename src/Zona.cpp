@@ -93,34 +93,36 @@ void Zona::llevar_veh_almacen(){
     string num_conc[4] = {"1", "2", "3" , "4"};
     int cont = 0;
     string concen = "";
+    Camion *cam;
 
     if(cam1->get_num_nodos() == 10){
+        cam = cam1;
+    }else if(cam2->get_num_nodos() == 10){
+        cam = cam2;
+    }else{
+        SetConsoleTextAttribute(h, 4);
+        cout << "ERROR: No hay ningun camion lleno, por lo que no vamos a llevar nada al almacen" << endl;
+        SetConsoleTextAttribute(h, 7);}
+
+
+    if(cam->get_num_nodos() == 10){
         while(cont < 10){
             concen = num_conc[FabricaService::GernerateRandomNumber(0,4)] + zona;
-            cam1->get_stack()->get_cima()->get_Vehiculo()->set_concesionario(concen);
+            cam->get_stack()->get_cima()->get_Vehiculo()->set_concesionario(concen);
 
-            almacen->set_nodo_cola(cam1->get_stack()->get_cima()->get_Vehiculo());
-            cam1->get_stack()->desapilar_nodo();
-            cam1->decrementar_capacidad();
-            cout << "La capacidad del camion es" << cam1->get_num_nodos() << endl;
+            almacen->set_nodo_cola(cam->get_stack()->get_cima()->get_Vehiculo());
+            cam->get_stack()->desapilar_nodo();
+            cam->decrementar_capacidad();
+            cout << "La capacidad del camion es" << cam->get_num_nodos() << endl;
             cont += 1;
             cout << "Vamos apilando por el coche" << cont << endl;
         }
-    }/*else if(cam2->get_num_nodos() == 10){
-        while(cam2->get_stack()->get_cima() != NULL){
+    }
 
-            cam2->get_stack()->get_cima()->get_Vehiculo()->set_concesionario(num_conc[FabricaService::GernerateRandomNumber(0,4)] + zona);
-            almacen->set_nodo_cola(cam2->get_stack()->get_cima()->get_Vehiculo());
-            cam2->get_stack()->desapilar_nodo();
-            cam2->decrementar_capacidad();
-        }
-        }else{
-        SetConsoleTextAttribute(h, 4);
-        cout << "ERROR: No hay ningun camion lleno, por lo que no vamos a llevar nada al almacen" << endl;
-        SetConsoleTextAttribute(h, 7);
-     }
-     */
 }
+
+
+
 void Zona::to_string(){
 
     cout << " La zona tiene asignada la siguiente letra " << zona << " posee el almacen "  << almacen<< endl;

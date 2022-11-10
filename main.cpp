@@ -32,7 +32,7 @@ int main()
     Zona* zonaD = new Zona("D");
 
 
-    FabricaService::GenerateRandomVehiculos(fab_vehiculos, 15);
+    FabricaService::GenerateRandomVehiculos(fab_vehiculos, 100);
     //FabricaService::MostrarDatosPorPantalla(fab_vehiculos);
 
     Gestor::paso_simulacion(zonaA, zonaB, zonaC, zonaD, fab_vehiculos);

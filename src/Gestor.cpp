@@ -24,6 +24,7 @@ void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fa
     en funcion de la zona de destino (elegida aleatoriamente).
 
     */
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     int num_coches_salen;
     int contador = 0;
@@ -53,9 +54,13 @@ void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fa
 
 
         //Le asignamos ZonaAleatoriamente
-       // int zone = FabricaService::GernerateRandomNumber(0,3);
-       // cout << "Zona caida ..." << zonas[zone] << endl;
-        switch(0){//Tocado
+        int zone = FabricaService::GernerateRandomNumber(0,3);
+
+        SetConsoleTextAttribute(h, 5);
+        cout << "Zona caida ..." << zonas[zone] << endl;
+        SetConsoleTextAttribute(h, 7);
+
+        switch(zone){//Tocado
 
         case 0:
             cout << "Estoy aqui dentro"<< endl;
@@ -64,26 +69,52 @@ void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fa
             cout << "El camion esta lleno?" << camlleno << endl;
            if(camlleno) {
                 //lo llevamos al almacen
+                SetConsoleTextAttribute(h, 11);
                 cout << "Vamos a borrar EL CAMION" << endl;
+                SetConsoleTextAttribute(h, 7);
                 zonaA->llevar_veh_almacen();
                 cout << "He salido!!!" << endl;
            }
             break;
 
-     /*   case 1:
+        case 1:
             camlleno = zonaB->set_veh_almacen(veh);
 
+            if(camlleno) {
+                //lo llevamos al almacen
+                  SetConsoleTextAttribute(h, 11);
+                cout << "Vamos a borrar EL CAMION" << endl;
+                SetConsoleTextAttribute(h, 7);
+                zonaB->llevar_veh_almacen();
+                cout << "He salido!!!" << endl;
+           }
             break;
 
         case 2:
             camlleno = zonaC->set_veh_almacen(veh);
+            if(camlleno) {
+                //lo llevamos al almacen
+                  SetConsoleTextAttribute(h, 11);
+                cout << "Vamos a borrar EL CAMION" << endl;
+                SetConsoleTextAttribute(h, 7);
+                zonaC->llevar_veh_almacen();
+                cout << "He salido!!!" << endl;
+           }
 
             break;
         case 3:
             camlleno = zonaD->set_veh_almacen(veh);
 
+            if(camlleno) {
+                //lo llevamos al almacen
+                SetConsoleTextAttribute(h, 11);
+                cout << "Vamos a borrar EL CAMION" << endl;
+                SetConsoleTextAttribute(h, 7);
+                zonaD->llevar_veh_almacen();
+                cout << "He salido!!!" << endl;
+           }
             break;
-*/
+
         default:
             cout << "ERROR: Algo ha pasado con la generacion aleatoria de numeros" << endl;
         }
