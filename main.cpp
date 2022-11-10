@@ -10,13 +10,76 @@
 #include "FabricaService.h"
 #include <time.h>
 #include "Pila.h"
-
+#include "Zona.h"
+#include "Gestor.h"
 using namespace std;
 
 int main()
 {
 
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+
+
+    //Creamos el objeto fabrica.
+    Fabrica *fab_vehiculos = new Fabrica("Fabrica Manolo");
+
+    //Creamos las zonas.
+
+    Zona* zonaA = new Zona("A");
+    Zona* zonaB = new Zona("B");
+    Zona* zonaC = new Zona("C");
+    Zona* zonaD = new Zona("D");
+
+
+    FabricaService::GenerateRandomVehiculos(fab_vehiculos, 15);
+    //FabricaService::MostrarDatosPorPantalla(fab_vehiculos);
+
+    Gestor::paso_simulacion(zonaA, zonaB, zonaC, zonaD, fab_vehiculos);
+
+
+   //zonaA->get_cam1()->get_stack()->get_cima()->get_Vehiculo()->to_string();
+   //zonaA->get_cam2()->get_stack()->get_cima()->get_Vehiculo()->to_string();
+
+    //zonaA->get_almacen()->get_datos_nodo_frente();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
     //Creamos la cola
     Fabrica *fab = new Fabrica("fabricas manolo");
@@ -97,22 +160,18 @@ int main()
     cola->get_datos_nodo_frente();
     */
 
-
+/*
     //Creamos el objeto fabrica.
     Fabrica *fab_vehiculos = new Fabrica("Fabrica Manolo");
 
-    //Creamos los 8 camiones.
-    Camion *camA1 = new Camion("A");
-    Camion *camA2 = new Camion("A");
+    //Creamos las zonas.
 
-    Camion *camB1 = new Camion("B");
-    Camion *camB2 = new Camion("B");
+    Zona* zonaA = new Zona("A");
+    Zona* zonaB = new Zona("B");
+    Zona* zonaC = new Zona("C");
+    Zona* zonaD = new Zona("D");
 
-    Camion *camC1 = new Camion("C");
-    Camion *camC2 = new Camion("C");
 
-    Camion *camD1 = new Camion("D");
-    Camion *camD2 = new Camion("D");
 
 
     //Variables de control del menu de usuario
@@ -211,6 +270,6 @@ int main()
     }
 
 
-
+*/
     return 0;
 }

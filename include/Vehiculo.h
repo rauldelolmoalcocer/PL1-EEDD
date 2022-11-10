@@ -17,6 +17,8 @@ class Vehiculo
         string get_color();
         string get_concesionario();
 
+        void set_concesionario(string concen);
+
     private:
         string numero_bastidor;
         string modelo;

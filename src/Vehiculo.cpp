@@ -31,6 +31,9 @@ string Vehiculo::get_color(){
 string Vehiculo::get_concesionario(){
     return(concesionario);
 }
+void Vehiculo::set_concesionario(string concen){
+    this->concesionario = concen;
+}
 
 
 void Vehiculo::to_string(){

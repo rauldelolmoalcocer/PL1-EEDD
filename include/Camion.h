@@ -18,6 +18,7 @@ class Camion
         int get_num_nodos();
 
         void incremetar_capacidad();
+        void decrementar_capacidad();
         bool overflow();
 
         void to_string();

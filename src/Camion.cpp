@@ -16,7 +16,9 @@ Camion::~Camion()
 {
     //dtor
 }
-
+void Camion::decrementar_capacidad(){
+    this->num_nodos = num_nodos - 1;
+}
 string Camion::get_zona_asig(){
     return(zona_asig);
 
@@ -34,7 +36,7 @@ int Camion::get_num_nodos(){
 }
 
 void Camion::incremetar_capacidad(){
-    this->capacidad = capacidad + 1;
+    this->num_nodos = num_nodos + 1;
 
 }
 bool Camion::overflow(){
