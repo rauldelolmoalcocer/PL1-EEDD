@@ -18,6 +18,10 @@ Pila::~Pila()
 Nodo* Pila::get_cima(){
     return(cima);
 }
+bool Pila::cola_vacia()
+{
+    return(cima == NULL ? true : false);
+}
 void Pila::desapilar_nodo(){
     Nodo *aux = cima;
     Vehiculo *veh = aux->get_Vehiculo();

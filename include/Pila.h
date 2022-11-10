@@ -13,7 +13,7 @@ public:
     void desapilar_nodo();
 
     void get_data_cima();
-
+    bool cola_vacia();
 protected:
 
 private:

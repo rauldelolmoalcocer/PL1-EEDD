@@ -17,7 +17,7 @@
 using namespace std;
 
 
-void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fabrica* fab){
+void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fabrica* fab, int NV){
 
     /*
     se sacan NS automóviles de la cola (almacen de la fabrica) y se llevan a uno de los camiones (pila),
@@ -26,7 +26,7 @@ void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fa
     */
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    int num_coches_salen;
+    //int num_coches_salen;
     int contador = 0;
     int camlleno;
     string zonas[4] = {"A", "B", "C", "D"};
@@ -35,11 +35,11 @@ void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fa
 
 
     cout << "Vamos a avanzar en un paso de la emulacion" << endl;
-    cout << "Dime el numero de coches que quieres que salgan de la fabrica" << endl;
-    cin >> num_coches_salen;
+    //cout << "Dime el numero de coches que quieres que salgan de la fabrica" << endl;
+    //cin >> num_coches_salen;
     Vehiculo *veh;
 
-    while(num_coches_salen > contador){
+    while(NV > contador){
 
         cout << "Se va a desencolar el coche.." << endl;
         fab->get_cola_fabricacion()->get_datos_nodo_frente();
@@ -128,3 +128,170 @@ void Gestor::paso_simulacion(Zona* zonaA,Zona* zonaB,Zona* zonaC,Zona* zonaD, Fa
 
 
 }
+
+void Gestor::ver_almacenes(Zona *zonaA,Zona *zonaB,Zona *zonaC,Zona *zonaD){
+
+    cout << "Vamos a imprimir por pantalla los datos de los almacenes" << endl;
+
+    cout << "ZONA A" << endl;
+    ver_cola_almacen(zonaA->get_almacen());
+
+    cout << "CAMIONES A1" << endl;
+    ver_camion(zonaA->get_cam1());
+    cout << "CAMIONES A2" << endl;
+    ver_camion(zonaA->get_cam2());
+
+    //------------------------------------------------------------------------------
+
+     cout << "ZONA B" << endl;
+    ver_cola_almacen(zonaB->get_almacen());
+
+    cout << "CAMIONES B1" << endl;
+    ver_camion(zonaB->get_cam1());
+    cout << "CAMIONES B2" << endl;
+    ver_camion(zonaB->get_cam2());
+
+    //------------------------------------------------------------------------------
+
+
+     cout << "ZONA C" << endl;
+    ver_cola_almacen(zonaC->get_almacen());
+
+    cout << "CAMIONES C1" << endl;
+    ver_camion(zonaC->get_cam1());
+    cout << "CAMIONES C2" << endl;
+    ver_camion(zonaC->get_cam2());
+
+    //------------------------------------------------------------------------------
+
+     cout << "ZONA D" << endl;
+    ver_cola_almacen(zonaD->get_almacen());
+
+    cout << "CAMIONES D1" << endl;
+    ver_camion(zonaD->get_cam1());
+    cout << "CAMIONES D2" << endl;
+    ver_camion(zonaD->get_cam2());
+
+    //------------------------------------------------------------------------------
+
+}
+
+void Gestor::ver_cola_almacen(Cola *col){
+
+    cout << "Vamos a ver la cola del almacen" << endl;
+
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+    Cola *aux = new Cola();
+
+    if(!col->cola_vacia()){
+
+
+       while(!col->cola_vacia()){
+
+            //pintamos los datos del frente de la cola.
+            SetConsoleTextAttribute(h, 2);
+            col->get_frente_cola()->get_Vehiculo()->to_string();
+            SetConsoleTextAttribute(h, 7);
+
+            //hazme una cima de cola y insertamela en la cola auxiliar
+            aux->set_nodo_cola(col->get_frente_cola()->get_Vehiculo());
+
+            //desapilamos
+            col->desencolar();
+
+        }
+
+        col = aux;
+        delete aux;
+    }else{
+
+        SetConsoleTextAttribute(h, 4);
+        cout << "ERROR:La cola esta vacia." << endl;
+        SetConsoleTextAttribute(h, 7);
+
+    }
+
+
+}
+
+void Gestor::ver_camion(Camion *cam){
+
+
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    Pila *pila = cam->get_stack();
+    Pila *aux = new Pila();
+    int cont = 0;
+
+    if(!pila->cola_vacia()){
+        while(cont < cam->get_num_nodos()){
+
+            SetConsoleTextAttribute(h, 2);
+            pila->get_cima()->get_Vehiculo()->to_string();
+            SetConsoleTextAttribute(h, 7);
+
+            aux->set_nodo_a_pila(pila->get_cima()->get_Vehiculo());
+            pila->desapilar_nodo();
+
+            cont+= 1;
+
+        }
+        pila = aux;
+    }else{
+        SetConsoleTextAttribute(h, 4);
+        cout << "ERROR:Camion vacio" << endl;
+        SetConsoleTextAttribute(h, 7);
+
+    }
+}
+
+void Gestor::borrar_registros(Zona *zonaA,Zona *zonaB,Zona *zonaC,Zona *zonaD, Fabrica *fab){
+
+    borrar_zona(zonaA);
+   // borrar_zona(zonaB);
+    //borrar_zona(zonaC);
+   // borrar_zona(zonaD);
+
+    //while(fab->get_cola_fabricacion()->get_frente_cola() != NULL){
+
+        //fab->get_cola_fabricacion()->desencolar();
+    //}
+
+
+
+
+}
+
+void Gestor::borrar_zona(Zona *zona){
+    cout << "He entrado" << endl;
+    int cont = 0;
+
+    while(zona->get_almacen()->get_frente_cola() != NULL){
+      zona->get_almacen()->desencolar();
+      cout << "Desapilado##################################################################################" << endl;
+    }
+
+
+
+    //cout << "pila vacia " << zona->get_cam1()->get_num_nodos() << endl;
+    //zona->get_cam1()->get_stack()->desapilar_nodo();
+   /*
+    while(cont < zona->get_cam1()->get_num_nodos()){
+        zona->get_cam1()->get_stack()->desapilar_nodo();
+        zona->get_cam1()->decrementar_capacidad();
+
+        cont+= 1;
+    }
+
+    cont = 0;
+    while(cont < zona->get_cam2()->get_num_nodos()){
+        zona->get_cam2()->get_stack()->desapilar_nodo();
+        zona->get_cam2()->decrementar_capacidad();
+
+        cont+= 1;
+    }
+*/
+
+}
+
+
