@@ -30,7 +30,9 @@ int Camion::get_capacidad(){
     return(capacidad);
 
 }
-
+void Camion::incrementar(int NUM){
+            this->num_nodos = NUM;
+        }
 int Camion::get_num_nodos(){
     return(num_nodos);
 }

@@ -23,6 +23,8 @@ class Camion
 
         void to_string();
 
+        //TEST
+        void incrementar(int NUM);
     private:
 
         string zona_asig;

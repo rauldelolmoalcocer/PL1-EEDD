@@ -25,7 +25,7 @@ class Zona
 
         bool set_veh_almacen(Vehiculo *veh);//meter vehiculos al almacen teniendo en cuenta la limitacion de 10 vehiculos
 
-
+        void set_almacen(Cola *almacen);
     protected:
 
     private:

@@ -12,12 +12,15 @@
 #include "Pila.h"
 #include "Zona.h"
 #include "Gestor.h"
+#include "Fabrica.h"
 
 #define NUM_AL 100
 using namespace std;
 
 int main()
 {
+
+    /*
 
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -38,7 +41,8 @@ int main()
     Gestor::paso_simulacion(zonaA, zonaB, zonaC, zonaD, fab_vehiculos,10);
 
 
-    Gestor::ver_almacenes(zonaA, zonaB, zonaC, zonaD);
+    //Gestor::ver_almacenes(zonaA, zonaB, zonaC, zonaD);
+
 
     Gestor::borrar_registros(zonaA, zonaB, zonaC, zonaD, fab_vehiculos);
 
@@ -54,46 +58,11 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    //Creamos la cola
-    Fabrica *fab = new Fabrica("fabricas manolo");
-
-    FabricaService::GenerateRandomVehiculos(fab, 13);
-
-
-    FabricaService::MostrarDatosPorPantalla(fab);
-
-    //fab->get_cola_fabricacion()->get_datos_nodo_frente();
-
 */
+
+
+
+
 
 /*
     Pila *pila = new Pila();
@@ -165,7 +134,7 @@ int main()
     CUIDADO CON EL NV TENERLO CONTROLADO POSIBLE PROBLEMA CON EL
 
     */
-/*
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     //Creamos el objeto fabrica.
     Fabrica *fab_vehiculos = new Fabrica("Fabrica Manolo");
 
@@ -291,7 +260,7 @@ int main()
 
         case 7:
             // 7. Borrar la cola de autom�viles disponibles en la f�brica, de los camiones y/o de los registros de zona.
-
+            Gestor::borrar_registros(zonaA, zonaB, zonaC, zonaD, fab_vehiculos);
             break;
         case 8:
             // 8. Realizar la simulaci�n hasta finalizar los autom�viles disponibles (en cada paso salen NS autom�viles)
@@ -316,7 +285,6 @@ int main()
 
     }
 
-*/
 
     return 0;
 }

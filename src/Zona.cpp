@@ -121,7 +121,9 @@ void Zona::llevar_veh_almacen(){
 
 }
 
-
+void Zona::set_almacen(Cola *almacen){
+    this->almacen = almacen;
+}
 
 void Zona::to_string(){
 
