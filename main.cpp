@@ -266,7 +266,7 @@ int main()
             // 8. Realizar la simulaci�n hasta finalizar los autom�viles disponibles (en cada paso salen NS autom�viles)
 
             if(!fab_vehiculos->get_cola_fabricacion()->cola_vacia()){
-                Gestor::paso_simulacion(zonaA, zonaB, zonaC, zonaD, fab_vehiculos, NUM_AL);
+                Gestor::paso_simulacion(zonaA, zonaB, zonaC, zonaD, fab_vehiculos, NV);
             }else{
                 SetConsoleTextAttribute(h, 4);
                 cout << "ERROR: La cola esta vacia." << endl;
