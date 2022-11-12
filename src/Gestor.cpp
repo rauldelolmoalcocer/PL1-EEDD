@@ -176,7 +176,6 @@ void Gestor::ver_almacenes(Zona *zonaA,Zona *zonaB,Zona *zonaC,Zona *zonaD){
 
 }
 
-
 void Gestor::ver_cola_almacen(Zona *zone){
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -230,9 +229,9 @@ void Gestor::ver_camion(Camion *cam){
     Pila *aux = new Pila();
 
     int cont = 0;
-       // cout << "########################################################" << endl;
-     //   cout << "########################################################" << endl;
-     //   cout << "########################################################" << endl;
+        // cout << "########################################################" << endl;
+        //   cout << "########################################################" << endl;
+        //   cout << "########################################################" << endl;
 
     if(true){
         while(cont < cam->get_num_nodos()){
@@ -317,7 +316,7 @@ void Gestor::borrar_zona(Zona *zona){
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     cout << "He entrado" << endl;
-    int cont = 1;
+    int cont = 0;
 
     while(zona->get_almacen()->get_frente_cola() != NULL){
       zona->get_almacen()->desencolar();
@@ -336,7 +335,7 @@ void Gestor::borrar_zona(Zona *zona){
         cont+= 1;
     }
 
-    cont = 1;
+    cont = 0;
     while(cont < zona->get_cam2()->get_num_nodos()){
         zona->get_cam2()->get_stack()->desapilar_nodo();
         zona->get_cam2()->decrementar_capacidad();
